@@ -1,22 +1,54 @@
+import { Box } from "@mui/system";
 import { CartWidget } from "../../common/cartwidget/CartWidget";
+import { Grid } from "@mui/material";
+import styles from "./Navbar.modules.css";
 
 export const Navbar = () => {
   return (
-    <div>
-      <h4>Imagen</h4>
-      <h1>SUMAKU</h1>
-      <h2>Tu Catnip-tienda oficial!</h2>
-      <ul>
-        <li>Todo</li>
-        <li>Descuento</li>
-        <li>ClubBoGi</li>
-      </ul>
-      <div>
-        <CartWidget />
-        <span>
-          <h2>2</h2>
-        </span>
-      </div>
-    </div>
+    <Box>
+      <Grid container direction="row" height={"2rem"}>
+        <Grid item xs={12} md={4}>
+          <img
+            width={"100px"}
+            src="https://static01.nyt.com/images/2022/06/21/science/14tb-Catnip1/14tb-Catnip1-jumbo.jpg?quality=75&auto=webp"
+            alt="gatito con su plantita de catnip"
+          />
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <h1>SUMAKU</h1>
+          <h2>Tu Catnip-tienda oficial!</h2>
+        </Grid>
+
+        <Grid
+          item
+          display={"flex"}
+          flexDirection="row"
+          xs={12}
+          md={4}
+          justifyItems={"center"}
+          textDecoration={"none"}
+        >
+          <ul
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <li className={styles.li}>
+              <h2>Todo</h2>
+            </li>
+            <li>
+              <h2>Descuento</h2>
+            </li>
+            <li>
+              <h2>ClubBoGi</h2>
+            </li>
+          </ul>
+          <Grid item>
+            <CartWidget />
+          </Grid>
+        </Grid>
+      </Grid>
+    </Box>
   );
 };

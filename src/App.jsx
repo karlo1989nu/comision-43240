@@ -10,13 +10,18 @@ const App = () => {
   console.log(isDark);
 
   return (
-    <div>
-      <Navbar />
-      <ProductsList nombre={nombre} edad={edad} />
-      <button onClick={() => setNombre("Kuki")}>Cambiar nombre</button>
-      <button onClick={() => setIsDark(!isDark)}>IsDark?</button>
-      <Greeting name="Fulano" />
-    </div>
+    <>
+      <nav style={{ margin: "30px" }}>
+        {" "}
+        <Navbar />
+      </nav>
+      <main>
+        <ProductsList nombre={nombre} edad={edad} />
+        <button onClick={() => setNombre("Kuki")}>Cambiar nombre</button>
+        <button onClick={() => setIsDark(!isDark)}>IsDark?</button>
+        <Greeting name="Fulano" />
+      </main>
+    </>
   );
 };
 
