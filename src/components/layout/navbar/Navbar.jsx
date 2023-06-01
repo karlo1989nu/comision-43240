@@ -1,12 +1,12 @@
 import { Box } from "@mui/system";
 import { CartWidget } from "../../common/cartwidget/CartWidget";
 import { Grid } from "@mui/material";
-import styles from "./Navbar.modules.css";
+
 
 export const Navbar = () => {
   return (
     <Box>
-      <Grid container direction="row" height={"2rem"}>
+      <Grid container felxDirection="row" height={"2rem"}>
         <Grid item xs={12} md={4}>
           <img
             width={"100px"}
@@ -14,7 +14,7 @@ export const Navbar = () => {
             alt="gatito con su plantita de catnip"
           />
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} flexDirection={'row'} listStyleType= {'none'}>
           <h1>SUMAKU</h1>
           <h2>Tu Catnip-tienda oficial!</h2>
         </Grid>
@@ -26,22 +26,25 @@ export const Navbar = () => {
           xs={12}
           md={4}
           justifyItems={"center"}
-          textDecoration={"none"}
         >
           <ul
             style={{
+              style: "listStyle",
+              listStyle: "none",
               display: "flex",
               flexDirection: "row",
+              textDecoration: "none",
+
             }}
           >
-            <li className={styles.li}>
-              <h2>Todo</h2>
+            <li>
+              Todo
             </li>
             <li>
-              <h2>Descuento</h2>
+              Descuento
             </li>
             <li>
-              <h2>ClubBoGi</h2>
+              ClubBoGi
             </li>
           </ul>
           <Grid item>
