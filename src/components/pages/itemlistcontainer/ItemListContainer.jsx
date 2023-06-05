@@ -1,11 +1,17 @@
-import { Counter } from "../../common/counter/Counter";
+import { useState } from "react";
 
-export const ProductsList = ({ nombre, edad }) => {
+
+export const ProductsList = () => {
+ const [contador, setContador] = useState(0 )
+ console.log('El componente fue montado');
+
   return (
-    <>
-      <h2>Hola, mi nombre es {nombre}</h2>
-      <h2>Y mi edad es {edad}</h2>
-      <Counter />
-    </>
+   <>
+   <h2>Aquí van los productos</h2>
+
+<button onClick={() => setContador(contador+1)}>Sumar</button>
+   {/*<Counter/>*/}
+   </>
+      
   );
 };

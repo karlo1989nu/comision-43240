@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
 import { CartWidget } from "../../common/cartwidget/CartWidget";
 import { Grid } from "@mui/material";
-import styles from "./Navbar.modules.css";
+
 
 export const Navbar = () => {
   return (
