@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "./components/layout/navbar/Navbar";
-import { ProductsList } from "./components/pages/itemlistcontainer/ItemListContainer";
+import { ItemsListContainer } from "./components/pages/itemlistcontainer/ItemsListContainer";
 
 const App = () => {
   const [montado, setMontado] = useState(false);
@@ -11,7 +11,7 @@ const App = () => {
         {" "}
         <Navbar />
       </nav>
-      {montado && <ProductsList nombre={nombre} />}
+      {montado && <ItemsListContainer nombre={nombre} />}
       <button onClick={() => setMontado(!montado)}>Montar</button>
       <button onClick={() => setNombre("Pepe")}>Name</button>
     </>

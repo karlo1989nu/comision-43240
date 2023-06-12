@@ -9,7 +9,7 @@ export const Navbar = () => {
         <Grid item xs={12} md={4}>
           <img
             width={"100px"}
-            src="https://static01.nyt.com/images/2022/06/21/science/14tb-Catnip1/14tb-Catnip1-jumbo.jpg?quality=75&auto=webp"
+            src="https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686596018/comision-43240/14tb-Catnip1-jumbo_cszi3n.jpg"
             alt="gatito con su plantita de catnip"
           />
         </Grid>
