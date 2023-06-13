@@ -14,7 +14,7 @@ export const products = [
     description: "Try this to know the glory",
     price: 1000,
     stock: 123,
-    img: "",
+    img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686658877/comision-43240/gray-tabby-cat-sniffing-catnip-600w-1750474934_o9vjot.jpg",
     category: "Catnip Barato",
   },
   {
@@ -23,7 +23,7 @@ export const products = [
     description: "This is a sentence to paradise with tequila",
     price: 1500,
     stock: 134,
-    img: "",
+    img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686658920/comision-43240/gray-cat-enjoying-fresh-catnip-600w-688656943_alkdzs.jpg",
     category: "Catnip Barato",
   },
   {
@@ -32,7 +32,7 @@ export const products = [
     description: "Don't forget your mate with this",
     price: 2000,
     stock: 145,
-    img: "",
+    img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686658938/comision-43240/friss-macskamenta-macska-_C3_A9s-v_C3_A1za_zbcuaw.jpg",
     category: "Catnip Barato",
   },
   {

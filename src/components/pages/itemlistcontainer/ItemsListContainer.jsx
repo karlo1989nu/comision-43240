@@ -4,7 +4,6 @@ import { products } from "../../../productsMock";
 
 export const ItemsListContainer = () => {
   const [items, setItems] = useState([]);
-  console.log(items);
   useEffect(() => {
     const tarea = new Promise((resolve, reject) => {
       setTimeout(() => {
