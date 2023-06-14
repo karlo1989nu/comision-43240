@@ -1,6 +1,7 @@
 import { ItemsListPresentational } from "./ItemsListPresentational";
 import { useState, useEffect } from "react";
 import { products } from "../../../productsMock";
+import { Grid } from "@mui/material";
 
 export const ItemsListContainer = () => {
   const [items, setItems] = useState([]);
@@ -8,7 +9,7 @@ export const ItemsListContainer = () => {
     const tarea = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(products);
-      }, 3000);
+      }, 1000);
 
       //reject("La promesa no se resuelve");
     });
@@ -38,5 +39,9 @@ export const ItemsListContainer = () => {
     }
     getData();*/
   }, []);
-  return <ItemsListPresentational items={items} />;
+  return (
+    <Grid container item xs={4} margin={"5px"}>
+      <ItemsListPresentational items={items} />
+    </Grid>
+  );
 };

@@ -5,7 +5,7 @@ import { Grid } from "@mui/material";
 export const Navbar = () => {
   return (
     <Box>
-      <Grid container direction="row" height={"2rem"}>
+      <Grid container direction="row" height={"2rem"} spacing={0}>
         <Grid item xs={12} md={4}>
           <img
             width={"100px"}

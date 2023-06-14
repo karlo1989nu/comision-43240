@@ -41,7 +41,7 @@ export const products = [
     description: "Available at Moe's",
     price: 2500,
     stock: 156,
-    img: "",
+    img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686694467/052022_T118630_202009_Bonnie_Catnip_ALT_01_eotkly.jpg",
     category: "Catnip del Bueno",
   },
   {
@@ -50,7 +50,7 @@ export const products = [
     description: "Meow",
     price: 3000,
     stock: 167,
-    img: "",
+    img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686694553/catnip_tgbnqb.jpg",
     category: "Catnip del Bueno",
   },
   {
@@ -59,7 +59,7 @@ export const products = [
     description: "Bring your own bagette",
     price: 3500,
     stock: 178,
-    img: "",
+    img: "https://www.rareseeds.com/media/catalog/product/cache/c47cc5acc2b9ab2a357f100ee4780008/c/a/catnip-hb127-lss-dsc_8788.gif",
     category: "Catnip del Bueno",
   },
   {
@@ -68,7 +68,7 @@ export const products = [
     description: "Bring your pizza",
     price: 4000,
     stock: 189,
-    img: "",
+    img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686763983/comision-43240/1000_F_444128615_01kZN7G2sEw6GhGcaU5i9ucbjuw3hcaY_mt97kj.jpg",
     category: "Catnip del rebueno",
   },
   {
@@ -77,7 +77,7 @@ export const products = [
     description: "Hahahahahahahaha",
     price: 4500,
     stock: 190,
-    img: "",
+    img: "https://www.petgreens.com/wp-content/uploads/2021/07/Catnip-5-17-21-660x835.jpg",
     category: "Catnip del rebueno",
   },
   {
@@ -86,7 +86,7 @@ export const products = [
     description: "Meowidy meow",
     price: 5000,
     stock: 200,
-    img: "",
+    img: "https://atxanimalclinic.com/wp-content/uploads/2022/09/cats-and-catnip.jpg",
     category: "Catnip del rebueno",
   },
 ];
