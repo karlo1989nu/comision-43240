@@ -22,7 +22,7 @@ const ProductDetailContainer = () => {
   }, [id]);
 
   console.log(productSelected);
-  return <ProductDetail productSelected="productSelected" />;
+  return <ProductDetail />;
 };
 
 export default ProductDetailContainer;
