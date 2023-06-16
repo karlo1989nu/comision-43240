@@ -4,14 +4,17 @@ import { products } from "../../../productsMock";
 
 const ProductDetailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
-  let id = 2;
+
+  let id = 102;
+
   useEffect(() => {
     let productFind = products.find((product) => {
-      product.id === id;
+      return product.id === id;
     });
     const getProduct = new Promise((res, rej) => {
       res(productFind);
     });
+
     getProduct
       .then((res) => {
         setProductSelected(res);
@@ -22,7 +25,8 @@ const ProductDetailContainer = () => {
   }, [id]);
 
   console.log(productSelected);
-  return <ProductDetail />;
+
+  return <ProductDetail productSelected={productSelected} />;
 };
 
 export default ProductDetailContainer;
