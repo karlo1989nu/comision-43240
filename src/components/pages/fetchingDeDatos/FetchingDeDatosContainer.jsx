@@ -25,10 +25,15 @@ const FetchingDeDatosContainer = () => {
       userName: "pe_ju",
       email: "juan.perez@gmail.es",
     };
-    fetch("https://jsonplaceholder.typicode.com/users", {
+    const promise = fetch("https://jsonplaceholder.typicode.com/users", {
       method: "POST",
       body: JSON.stringify(data),
     });
+
+    promise
+      .then((res) => res.json())
+      .then((data) => console.log("New User:", data))
+      .catch((err) => console.log(err));
   };
 
   return <FetchingDeDatos users={users} createUser={createUser} />;

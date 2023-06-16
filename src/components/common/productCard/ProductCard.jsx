@@ -32,7 +32,7 @@ const ProductCard = ({ e }) => {
           Comprar
         </Button>
         <Button variant="contained" size="small">
-          Agregar al carrito
+          Ver Detalle
         </Button>
       </CardActions>
     </Card>
