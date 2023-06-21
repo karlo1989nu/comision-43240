@@ -35,11 +35,12 @@ const App = () => {
               </Grid>
             </Box>
           </Navbar>
+          <Users />
         </Box>
       </Grid>
 
       {/*<Grid style={{ margin: "10px" }}>*/}
-      {/*<Users />*/}
+
       {/*<Posts /><Users />*}
       {/*<Comments />*/}
       {/*<ItemCount />*/}
