@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductDetail from "./ProductDetail";
 import { products } from "../../../productsMock";
+import { Box, Grid } from "@mui/material";
 
 const ProductDetailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
@@ -26,7 +27,13 @@ const ProductDetailContainer = () => {
 
   console.log(productSelected);
 
-  return <ProductDetail productSelected={productSelected} />;
+  return (
+    <Box>
+      <Grid>
+        <ProductDetail productSelected={productSelected} />
+      </Grid>
+    </Box>
+  );
 };
 
 export default ProductDetailContainer;

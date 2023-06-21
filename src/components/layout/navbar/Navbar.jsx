@@ -1,8 +1,8 @@
 import { Box } from "@mui/system";
 import { CartWidget } from "../../common/cartwidget/CartWidget";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 
-export const Navbar = () => {
+export const Navbar = ({ children }) => {
   return (
     <Box>
       <Grid container direction="row" height={"2rem"} spacing={0}>
@@ -27,16 +27,19 @@ export const Navbar = () => {
           justifyItems={"center"}
           textDecoration={"none"}
         >
-          <nav>
-            <button>Catnip Barato</button>
-            <button>Catnip del bueno</button>
-            <button>Catnip del rebueno</button>
-          </nav>
-          <Grid item>
-            <CartWidget />
-          </Grid>
+          <Button variant="contained" size="small">
+            Catnip Barato
+          </Button>
+          <Button variant="contained" size="small">
+            Catnip del bueno
+          </Button>
+          <Button variant="contained" size="small">
+            Catnip del rebueno
+          </Button>
+          <CartWidget />
         </Grid>
       </Grid>
+      {children}
     </Box>
   );
 };

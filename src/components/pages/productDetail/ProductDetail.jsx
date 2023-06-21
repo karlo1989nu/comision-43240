@@ -6,8 +6,15 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { ItemCount } from "../../common/counter/ItemCount";
 
 const ProductDetail = ({ productSelected }) => {
+  const onAdd = (cantidad) => {
+    let data = { ...productSelected, quantity: cantidad };
+
+    console.log(data);
+  };
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -35,6 +42,11 @@ const ProductDetail = ({ productSelected }) => {
           Ver Detalle
         </Button>
       </CardActions>
+      {productSelected.stock > 0 ? (
+        <ItemCount stock={productSelected.stock} initial={1} onAdd={onAdd} />
+      ) : (
+        <h2>No hay stock</h2>
+      )}
     </Card>
   );
 };
