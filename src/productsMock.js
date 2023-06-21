@@ -13,7 +13,7 @@ export const products = [
     title: "Meowabonga",
     description: "Try this to know the glory",
     price: 1000,
-    stock: 0,
+    stock: 18,
     img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686658877/comision-43240/gray-tabby-cat-sniffing-catnip-600w-1750474934_o9vjot.jpg",
     category: "Catnip Barato",
   },

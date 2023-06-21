@@ -2,7 +2,7 @@ import { Box } from "@mui/system";
 import { CartWidget } from "../../common/cartwidget/CartWidget";
 import { Button, Grid } from "@mui/material";
 
-export const Navbar = ({ children }) => {
+export const Navbar = () => {
   return (
     <Box>
       <Grid container direction="row" height={"2rem"} spacing={0}>
@@ -39,7 +39,6 @@ export const Navbar = ({ children }) => {
           <CartWidget />
         </Grid>
       </Grid>
-      {children}
     </Box>
   );
 };
