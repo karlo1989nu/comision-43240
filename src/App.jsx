@@ -1,7 +1,6 @@
 // import { Box, Grid, Typography } from "@mui/material";
-import { LayOut } from "./components/layout/LayOut";
-import Footer from "./components/layout/footer/Footer";
-
+import { Layout } from "./components/layout/Layout";
+import { Footer } from "./components/layout/footer/Footer";
 import { ItemsListContainer } from "./components/pages/itemlistcontainer/ItemsListContainer";
 // import FetchingDeDatosContainerfrom "./components/pages/fetchingDeDatos/FetchingDeDatosContainer";
 import ProductDetailContainer from "./components/pages/productDetail/ProductDetailContainer";
@@ -16,12 +15,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<LayOut />}>
-          <Route element={<Footer />}>
-            <Route path="/" element={<ItemsListContainer />} />
-            <Route path="/carrito" element={<h1>Hola</h1>} />
-            <Route path="/itemDetail" element={<ProductDetailContainer />} />
-          </Route>
+        <Route element={<Layout />}>
+          <Route path="/" element={<ItemsListContainer />} />
+          <Route path="/carrito" element={<h1>Hola</h1>} />
+          <Route path="/itemDetail" element={<ProductDetailContainer />} />
         </Route>
 
         <Route path="*" element={<h1>404 NOT FOUND</h1>} />

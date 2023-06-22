@@ -2,6 +2,7 @@ import { ItemsListPresentational } from "./ItemsListPresentational";
 import { useState, useEffect } from "react";
 import { products } from "../../../productsMock";
 import { Grid } from "@mui/material";
+import "./itemlistcontainer.css";
 
 export const ItemsListContainer = () => {
   const [items, setItems] = useState([]);
@@ -40,8 +41,8 @@ export const ItemsListContainer = () => {
     getData();*/
   }, []);
   return (
-    <Grid container item xs={4} margin={"5px"}>
+    <div className="cardsContainer">
       <ItemsListPresentational items={items} />
-    </Grid>
+    </div>
   );
 };
