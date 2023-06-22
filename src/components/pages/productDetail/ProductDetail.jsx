@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import { ItemCount } from "../../common/counter/ItemCount";
+import { Link } from "react-router-dom";
 
 const ProductDetail = ({ productSelected }) => {
   const onAdd = (cantidad) => {
@@ -36,10 +37,7 @@ const ProductDetail = ({ productSelected }) => {
       </CardContent>
       <CardActions>
         <Button variant="contained" size="small">
-          Comprar
-        </Button>
-        <Button variant="contained" size="small">
-          Ver Detalle
+          <Link to={"/carrito"}>Comprar</Link>
         </Button>
       </CardActions>
       {productSelected.stock > 0 ? (

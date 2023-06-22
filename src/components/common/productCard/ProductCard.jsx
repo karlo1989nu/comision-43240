@@ -6,6 +6,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ e }) => {
   return (
@@ -29,10 +30,10 @@ const ProductCard = ({ e }) => {
       </CardContent>
       <CardActions>
         <Button variant="contained" size="small">
-          Comprar
+          <Link to={"/carrito"}>Comprar </Link>
         </Button>
         <Button variant="contained" size="small">
-          Ver Detalle
+          <Link to={"/itemDetail"}>Ver Detalle</Link>
         </Button>
       </CardActions>
     </Card>

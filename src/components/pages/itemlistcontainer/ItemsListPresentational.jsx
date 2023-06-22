@@ -4,7 +4,7 @@ import "./ItemListContainer.css";
 export const ItemsListPresentational = ({ items }) => {
   console.log(items);
   return (
-    <div>
+    <div className="cardsContainer">
       {items.map((e) => {
         return <ProductCard key={e.id} e={e} />;
       })}

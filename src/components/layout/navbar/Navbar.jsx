@@ -1,10 +1,10 @@
-import { Box } from "@mui/system";
+import { Link } from "react-router-dom";
 import { CartWidget } from "../../common/cartwidget/CartWidget";
 import { Button, Grid } from "@mui/material";
 
 export const Navbar = () => {
   return (
-    <Box>
+    <div className="navbarContainer">
       <Grid container direction="row" height={"2rem"} spacing={0}>
         <Grid item xs={12} md={4}>
           <img
@@ -13,9 +13,12 @@ export const Navbar = () => {
             alt="gatito con su plantita de catnip"
           />
         </Grid>
+
         <Grid item xs={12} md={4}>
-          <h1>SUMAKU</h1>
-          <h2>Tu Catnip-tienda oficial!</h2>
+          <Link to={"/"}>
+            <h1>SUMAKU</h1>
+            <h2>Tu Catnip-tienda oficial!</h2>
+          </Link>
         </Grid>
 
         <Grid
@@ -36,9 +39,11 @@ export const Navbar = () => {
           <Button variant="contained" size="small">
             Catnip del rebueno
           </Button>
-          <CartWidget />
+          <Link to={"/carrito"}>
+            <CartWidget />
+          </Link>
         </Grid>
       </Grid>
-    </Box>
+    </div>
   );
 };
