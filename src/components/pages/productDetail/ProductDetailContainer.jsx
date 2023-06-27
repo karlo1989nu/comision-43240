@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import ProductDetail from "./ProductDetail";
 import { products } from "../../../productsMock";
 import { Box, Grid } from "@mui/material";
+import { useParams } from "react-router-dom";
 
 const ProductDetailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
 
-  let id = 102;
+  const { id } = useParams();
 
   useEffect(() => {
     let productFind = products.find((product) => {
-      return product.id === id;
+      return product.id === +id;
     });
     const getProduct = new Promise((res, rej) => {
       res(productFind);
@@ -24,8 +25,6 @@ const ProductDetailContainer = () => {
         console.log(err);
       });
   }, [id]);
-
-  console.log(productSelected);
 
   return (
     <Box>

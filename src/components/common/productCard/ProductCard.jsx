@@ -33,7 +33,7 @@ const ProductCard = ({ e }) => {
           <Link to={"/carrito"}>Comprar </Link>
         </Button>
         <Button variant="contained" size="small">
-          <Link to={"/itemDetail"}>Ver Detalle</Link>
+          <Link to={`/itemDetail/${e.id}`}>Ver Detalle</Link>
         </Button>
       </CardActions>
     </Card>

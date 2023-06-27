@@ -31,13 +31,13 @@ export const Navbar = () => {
           textDecoration={"none"}
         >
           <Button variant="contained" size="small">
-            Catnip Barato
+            <Link to="/categoryName/delbarato">Catnip Barato</Link>
           </Button>
           <Button variant="contained" size="small">
-            Catnip del bueno
+            <Link to="/categoryName/delbueno">Catnip del bueno</Link>
           </Button>
           <Button variant="contained" size="small">
-            Catnip del rebueno
+            <Link to="/categoryName/delrebueno">Catnip del rebueno</Link>
           </Button>
           <Link to={"/carrito"}>
             <CartWidget />

@@ -6,7 +6,7 @@ export const products = [
     price: 500,
     stock: 15,
     img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686596193/comision-43240/d71d8f5d1a590c05e16e7f0eaa0bc37f_oxhjxj.png",
-    category: "Catnip Barato",
+    category: "delbarato",
   },
   {
     id: 102,
@@ -15,7 +15,7 @@ export const products = [
     price: 1000,
     stock: 18,
     img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686658877/comision-43240/gray-tabby-cat-sniffing-catnip-600w-1750474934_o9vjot.jpg",
-    category: "Catnip Barato",
+    category: "delbarato",
   },
   {
     id: 103,
@@ -24,7 +24,7 @@ export const products = [
     price: 1500,
     stock: 134,
     img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686658920/comision-43240/gray-cat-enjoying-fresh-catnip-600w-688656943_alkdzs.jpg",
-    category: "Catnip Barato",
+    category: "delbarato",
   },
   {
     id: 104,
@@ -33,7 +33,7 @@ export const products = [
     price: 2000,
     stock: 145,
     img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686658938/comision-43240/friss-macskamenta-macska-_C3_A9s-v_C3_A1za_zbcuaw.jpg",
-    category: "Catnip Barato",
+    category: "delbarato",
   },
   {
     id: 105,
@@ -42,7 +42,7 @@ export const products = [
     price: 2500,
     stock: 156,
     img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686694467/052022_T118630_202009_Bonnie_Catnip_ALT_01_eotkly.jpg",
-    category: "Catnip del Bueno",
+    category: "delbueno",
   },
   {
     id: 106,
@@ -51,7 +51,7 @@ export const products = [
     price: 3000,
     stock: 167,
     img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686694553/catnip_tgbnqb.jpg",
-    category: "Catnip del Bueno",
+    category: "delbueno",
   },
   {
     id: 107,
@@ -60,7 +60,7 @@ export const products = [
     price: 3500,
     stock: 178,
     img: "https://www.rareseeds.com/media/catalog/product/cache/c47cc5acc2b9ab2a357f100ee4780008/c/a/catnip-hb127-lss-dsc_8788.gif",
-    category: "Catnip del Bueno",
+    category: "delbueno",
   },
   {
     id: 108,
@@ -69,7 +69,7 @@ export const products = [
     price: 4000,
     stock: 189,
     img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686763983/comision-43240/1000_F_444128615_01kZN7G2sEw6GhGcaU5i9ucbjuw3hcaY_mt97kj.jpg",
-    category: "Catnip del rebueno",
+    category: "delrebueno",
   },
   {
     id: 109,
@@ -78,7 +78,7 @@ export const products = [
     price: 4500,
     stock: 190,
     img: "https://www.petgreens.com/wp-content/uploads/2021/07/Catnip-5-17-21-660x835.jpg",
-    category: "Catnip del rebueno",
+    category: "delrebueno",
   },
   {
     id: 110,
@@ -87,6 +87,6 @@ export const products = [
     price: 5000,
     stock: 10,
     img: "https://atxanimalclinic.com/wp-content/uploads/2022/09/cats-and-catnip.jpg",
-    category: "Catnip del rebueno",
+    category: "delrebueno",
   },
 ];

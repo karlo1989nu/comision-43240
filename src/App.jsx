@@ -11,7 +11,11 @@ const App = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<ItemsListContainer />} />
           <Route path="/carrito" element={<CartContainer />} />
-          <Route path="/itemDetail" element={<ProductDetailContainer />} />
+          <Route path="/itemDetail/:id" element={<ProductDetailContainer />} />
+          <Route
+            path="/itemDetail/price/:priceName"
+            element={<ProductDetailContainer />}
+          />
         </Route>
 
         <Route path="*" element={<h1>404 NOT FOUND</h1>} />
