@@ -7,11 +7,13 @@ export const Navbar = () => {
     <div className="navbarContainer">
       <Grid container direction="row" height={"2rem"} spacing={0}>
         <Grid item xs={12} md={4}>
-          <img
-            width={"100px"}
-            src="https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686596018/comision-43240/14tb-Catnip1-jumbo_cszi3n.jpg"
-            alt="gatito con su plantita de catnip"
-          />
+          <Link to={"/"}>
+            <img
+              width={"100px"}
+              src="https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686596018/comision-43240/14tb-Catnip1-jumbo_cszi3n.jpg"
+              alt="gatito con su plantita de catnip"
+            />
+          </Link>
         </Grid>
 
         <Grid item xs={12} md={4}>

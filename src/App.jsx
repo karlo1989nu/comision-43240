@@ -13,8 +13,8 @@ const App = () => {
           <Route path="/carrito" element={<CartContainer />} />
           <Route path="/itemDetail/:id" element={<ProductDetailContainer />} />
           <Route
-            path="/itemDetail/category/:categoryName"
-            element={<ProductDetailContainer />}
+            path="/categoryName/:categoryName"
+            element={<ItemsListContainer />}
           />
         </Route>
 
