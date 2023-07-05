@@ -1,4 +1,5 @@
 import { Layout } from "./components/layout/Layout";
+import { Form } from "./components/pages/Form/Form";
 import CartContainer from "./components/pages/cart/CartContainer";
 import { ItemsListContainer } from "./components/pages/itemlistcontainer/ItemsListContainer";
 import ProductDetailContainer from "./components/pages/productDetail/ProductDetailContainer";
@@ -17,7 +18,7 @@ const App = () => {
             element={<ItemsListContainer />}
           />
         </Route>
-
+        <Route path="/form" element={<Form />} />
         <Route path="*" element={<h1>404 NOT FOUND</h1>} />
       </Routes>
     </BrowserRouter>
