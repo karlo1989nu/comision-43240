@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { CartWidget } from "../../common/cartwidget/CartWidget";
 import { Button, Grid } from "@mui/material";
+import { menuNavigate } from "../../../routes/menuNavigate";
 
 export const Navbar = () => {
   return (
@@ -33,13 +34,11 @@ export const Navbar = () => {
           textDecoration={"none"}
         >
           <Button variant="contained" size="small">
-            <Link to="/categoryName/delbarato">Catnip Barato</Link>
-          </Button>
-          <Button variant="contained" size="small">
-            <Link to="/categoryName/delbueno">Catnip del bueno</Link>
-          </Button>
-          <Button variant="contained" size="small">
-            <Link to="/categoryName/delrebueno">Catnip del rebueno</Link>
+            {menuNavigate.map(({ id, path, title }) => (
+              <Link key={id} to={path}>
+                {title}
+              </Link>
+            ))}
           </Button>
           <Link to={"/carrito"}>
             <CartWidget />

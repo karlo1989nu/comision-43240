@@ -1,8 +1,5 @@
 import { Layout } from "./components/layout/Layout";
-import { Form } from "./components/pages/Form/Form";
-import CartContainer from "./components/pages/cart/CartContainer";
-import { ItemsListContainer } from "./components/pages/itemlistcontainer/ItemsListContainer";
-import ProductDetailContainer from "./components/pages/productDetail/ProductDetailContainer";
+import { menuRoutes } from "./routes/menuRoutes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -10,15 +7,10 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<ItemsListContainer />} />
-          <Route path="/carrito" element={<CartContainer />} />
-          <Route path="/itemDetail/:id" element={<ProductDetailContainer />} />
-          <Route
-            path="/categoryName/:categoryName"
-            element={<ItemsListContainer />}
-          />
+          {menuRoutes.map(({ id, path, Element }) => (
+            <Route key={id} path={path} element={<Element />} />
+          ))}
         </Route>
-        <Route path="/form" element={<Form />} />
         <Route path="*" element={<h1>404 NOT FOUND</h1>} />
       </Routes>
     </BrowserRouter>
