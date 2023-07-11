@@ -9,11 +9,11 @@ import {
 import { ItemCount } from "../../common/counter/ItemCount";
 import { Link } from "react-router-dom";
 
-const ProductDetail = ({ productSelected }) => {
+const ProductDetail = ({ productSelected, agregarAlCarrito }) => {
   const onAdd = (cantidad) => {
     let data = { ...productSelected, quantity: cantidad };
 
-    console.log(data);
+    agregarAlCarrito(data);
   };
 
   return (

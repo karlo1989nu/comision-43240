@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProductDetail from "./ProductDetail";
 import { products } from "../../../productsMock";
 import { Box, Grid } from "@mui/material";
 import { useParams } from "react-router-dom";
+import { CartContext } from "../../../context/CartContext";
 
 const ProductDetailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
+
+  const { agregarAlCarrito } = useContext(CartContext);
 
   const { id } = useParams();
 
@@ -29,7 +32,10 @@ const ProductDetailContainer = () => {
   return (
     <Box>
       <Grid>
-        <ProductDetail productSelected={productSelected} />
+        <ProductDetail
+          productSelected={productSelected}
+          agregarAlCarrito={agregarAlCarrito}
+        />
       </Grid>
     </Box>
   );

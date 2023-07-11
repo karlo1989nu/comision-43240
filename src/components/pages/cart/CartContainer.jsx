@@ -1,13 +1,9 @@
-const CartContainer = () => {
-  const compraRealizada = () => {
-    console.log("Compra exitosa. Gracias por su compra");
-  };
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
 
-  return (
-    <div>
-      <button onClick={compraRealizada()}>Comprar</button>
-    </div>
-  );
+const CartContainer = () => {
+  const { cart } = useContext(CartContext);
+  return;
 };
 
 export default CartContainer;
