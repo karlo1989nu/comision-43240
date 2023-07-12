@@ -2,7 +2,7 @@ import { Grid, Button, Box } from "@mui/material";
 //import { useState } from "react";
 import { useCount } from "../../hooks/UseCount";
 
-export const ItemCount = ({ stock, initial, onAdd }) => {
+export const ItemCount = ({ stock, initial = 1, onAdd }) => {
   const { decrement, increment, reset, count } = useCount(initial, stock);
   return (
     <Grid container marginLeft={"40px"} direction={"row"}>

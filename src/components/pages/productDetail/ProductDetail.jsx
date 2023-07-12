@@ -9,7 +9,7 @@ import {
 import { ItemCount } from "../../common/counter/ItemCount";
 import { Link } from "react-router-dom";
 
-const ProductDetail = ({ productSelected, agregarAlCarrito }) => {
+const ProductDetail = ({ productSelected, agregarAlCarrito, cantidad }) => {
   const onAdd = (cantidad) => {
     let data = { ...productSelected, quantity: cantidad };
 
@@ -41,7 +41,11 @@ const ProductDetail = ({ productSelected, agregarAlCarrito }) => {
         </Button>
       </CardActions>
       {productSelected.stock > 0 ? (
-        <ItemCount stock={productSelected.stock} initial={1} onAdd={onAdd} />
+        <ItemCount
+          stock={productSelected.stock}
+          initial={cantidad}
+          onAdd={onAdd}
+        />
       ) : (
         <h2>No hay stock</h2>
       )}
