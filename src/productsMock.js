@@ -4,7 +4,7 @@ export const products = [
     title: "Meowloha",
     description: "Buy it now and taste heaven",
     price: 500,
-    stock: 15,
+    stock: 1,
     img: "https://res.cloudinary.com/dwzbz3j4q/image/upload/v1686596193/comision-43240/d71d8f5d1a590c05e16e7f0eaa0bc37f_oxhjxj.png",
     category: "delbarato",
   },

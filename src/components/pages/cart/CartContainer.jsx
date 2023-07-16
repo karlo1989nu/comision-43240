@@ -1,12 +1,31 @@
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
+import Swal from "sweetalert2";
 
 const CartContainer = () => {
   const { cart, clearCart, removeById } = useContext(CartContext);
-  console.log(cart);
+
+  const limpiarCarrito = () => {
+    Swal.fire({
+      title: "Do you want to clear the cart?",
+      showDenyButton: true,
+      showCancelButton: false,
+      confirmButtonText: "Yes",
+      denyButtonText: `No`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        clearCart();
+        Swal.fire("Cart empty!", "", "success");
+      } else if (result.isDenied) {
+        Swal.fire("Changes are not saved", "", "info");
+      }
+    });
+  };
+
   return (
     <div>
-      <button onClick={clearCart}>Limpiar carrito</button>
+      <button onClick={limpiarCarrito}>Limpiar carrito</button>
       {cart.map((product) => {
         return (
           <div key={product.id}>

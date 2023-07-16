@@ -9,13 +9,7 @@ import {
 import { ItemCount } from "../../common/counter/ItemCount";
 import { Link } from "react-router-dom";
 
-const ProductDetail = ({ productSelected, agregarAlCarrito, cantidad }) => {
-  const onAdd = (cantidad) => {
-    let data = { ...productSelected, quantity: cantidad };
-
-    agregarAlCarrito(data);
-  };
-
+const ProductDetail = ({ productSelected, cantidad, onAdd }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia

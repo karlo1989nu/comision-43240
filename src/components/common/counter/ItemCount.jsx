@@ -16,7 +16,12 @@ export const ItemCount = ({ stock, initial = 1, onAdd }) => {
       <Button onClick={reset} variant="contained" size="small">
         Reset
       </Button>
-      <Button onClick={() => onAdd(count)} variant="contained" size="small">
+      <Button
+        disabled={stock < 2 ? true : false}
+        onClick={() => onAdd(count)}
+        variant="contained"
+        size="small"
+      >
         Add
       </Button>
     </Grid>
