@@ -1,9 +1,23 @@
+import { Button } from "@mui/material";
+
 export const Counter = ({ contador, setContador }) => {
   return (
     <div>
       <h2>{contador}</h2>
-      <button onClick={() => setContador(contador + 1)}>+1</button>
-      <button onClick={() => setContador(contador - 1)}>-1</button>
+      <Button
+        variant="contained"
+        size="small"
+        onClick={() => setContador(contador + 1)}
+      >
+        +1
+      </Button>
+      <Button
+        variant="contained"
+        size="small"
+        onClick={() => setContador(contador - 1)}
+      >
+        -1
+      </Button>
     </div>
   );
 };
