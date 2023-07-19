@@ -3,7 +3,8 @@ import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
 
 const CartContainer = () => {
-  const { cart, clearCart, removeById } = useContext(CartContext);
+  const { cart, clearCart, removeById, getTotalPrice } =
+    useContext(CartContext);
 
   const limpiarCarrito = () => {
     Swal.fire({
@@ -23,9 +24,11 @@ const CartContainer = () => {
     });
   };
 
+  let totalPrice = getTotalPrice();
+
   return (
     <div>
-      <button onClick={limpiarCarrito}>Limpiar carrito</button>
+      <h2>The total price is: {totalPrice}</h2>
       {cart.map((product) => {
         return (
           <div key={product.id}>
@@ -36,6 +39,9 @@ const CartContainer = () => {
           </div>
         );
       })}
+      {cart.length > 0 && (
+        <button onClick={limpiarCarrito}>Limpiar carrito</button>
+      )}
     </div>
   );
 };
