@@ -1,6 +1,5 @@
 export const products = [
   {
-    id: 101,
     title: "Meowloha",
     description: "Buy it now and taste heaven",
     price: 500,
@@ -9,7 +8,6 @@ export const products = [
     category: "delbarato",
   },
   {
-    id: 102,
     title: "Meowabonga",
     description: "Try this to know the glory",
     price: 1000,
@@ -18,7 +16,6 @@ export const products = [
     category: "delbarato",
   },
   {
-    id: 103,
     title: "Meowrale",
     description: "This is a sentence to paradise with tequila",
     price: 1500,
@@ -27,7 +24,6 @@ export const products = [
     category: "delbarato",
   },
   {
-    id: 104,
     title: "Meowla Pirola",
     description: "Don't forget your mate with this",
     price: 2000,
@@ -36,7 +32,6 @@ export const products = [
     category: "delbarato",
   },
   {
-    id: 105,
     title: "Meownda la osa",
     description: "Available at Moe's",
     price: 2500,
@@ -45,7 +40,6 @@ export const products = [
     category: "delbueno",
   },
   {
-    id: 106,
     title: "Meow",
     description: "Meow",
     price: 3000,
@@ -54,7 +48,6 @@ export const products = [
     category: "delbueno",
   },
   {
-    id: 107,
     title: "Meowlala",
     description: "Bring your own bagette",
     price: 3500,
@@ -63,7 +56,6 @@ export const products = [
     category: "delbueno",
   },
   {
-    id: 108,
     title: "Meowmamia",
     description: "Bring your pizza",
     price: 4000,
@@ -72,7 +64,6 @@ export const products = [
     category: "delrebueno",
   },
   {
-    id: 109,
     title: "Meowbye",
     description: "Hahahahahahahaha",
     price: 4500,
@@ -81,7 +72,6 @@ export const products = [
     category: "delrebueno",
   },
   {
-    id: 110,
     title: "Meowboy",
     description: "Meowidy meow",
     price: 5000,
