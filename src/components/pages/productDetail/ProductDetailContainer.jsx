@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import ProductDetail from "./ProductDetail";
-import { products } from "../../../productsMock";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
 import { PacmanLoader } from "react-spinners";
 import Swal from "sweetalert2";
+import { db } from "../../../firebaseConfig";
+import { collection, getDoc, doc } from "firebase/firestore";
 
 const override = {
   display: "block",
@@ -34,22 +35,13 @@ const ProductDetailContainer = () => {
   };
 
   useEffect(() => {
-    let productFind = products.find((product) => {
-      return product.id === +id;
-    });
-    const getProduct = new Promise((res) => {
-      setTimeout(() => {
-        res(productFind);
-      }, 2000);
-    });
-
-    getProduct
+    let itemCollection = collection(db, "products");
+    let refDoc = doc(itemCollection, id);
+    getDoc(refDoc)
       .then((res) => {
-        setProductSelected(res);
+        setProductSelected({ id: res.id, ...res.data() });
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch();
   }, [id]);
 
   return (

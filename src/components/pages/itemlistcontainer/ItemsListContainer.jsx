@@ -4,7 +4,7 @@ import "./itemlistcontainer.css";
 import { useParams } from "react-router-dom";
 import { PacmanLoader } from "react-spinners";
 import { db } from "../../../firebaseConfig";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const override = {
   display: "block",
@@ -17,7 +17,14 @@ export const ItemsListContainer = () => {
 
   useEffect(() => {
     let itemsCollection = collection(db, "products");
-    getDocs(itemsCollection)
+    let consulta;
+
+    if (!categoryName) {
+      consulta = itemsCollection;
+    } else {
+      consulta = query(itemsCollection, where("category", "==", categoryName));
+    }
+    getDocs(consulta)
       .then((res) => {
         let products = res.docs.map((e) => {
           return {
@@ -25,7 +32,7 @@ export const ItemsListContainer = () => {
             id: e.id,
           };
         });
-        console.log(products);
+        setItems(products);
       })
       .catch((err) => console.log(err));
   }, [categoryName]);
