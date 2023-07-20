@@ -1,9 +1,10 @@
 import { ItemsListPresentational } from "./ItemsListPresentational";
 import { useState, useEffect } from "react";
-import { products } from "../../../productsMock";
 import "./itemlistcontainer.css";
 import { useParams } from "react-router-dom";
 import { PacmanLoader } from "react-spinners";
+import { db } from "../../../firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
 
 const override = {
   display: "block",
@@ -13,27 +14,21 @@ const override = {
 export const ItemsListContainer = () => {
   const [items, setItems] = useState([]);
   const { categoryName } = useParams();
+
   useEffect(() => {
-    let prodFilt = products.filter((e) => e.category === categoryName);
-
-    const tarea = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(categoryName ? prodFilt : products);
-      }, 2000);
-    });
-
-    tarea
-      .then((respuesta) => {
-        setItems(respuesta);
+    let itemsCollection = collection(db, "products");
+    getDocs(itemsCollection)
+      .then((res) => {
+        let products = res.docs.map((e) => {
+          return {
+            ...e.data(),
+            id: e.id,
+          };
+        });
+        console.log(products);
       })
-      .catch((rechazo) => {
-        setItems(rechazo);
-      });
+      .catch((err) => console.log(err));
   }, [categoryName]);
-
-  // if (items.length === 0) {
-  //   return <h1>Cargando...</h1>;
-  // }
 
   return (
     <div>

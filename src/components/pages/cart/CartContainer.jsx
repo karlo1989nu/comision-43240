@@ -52,7 +52,7 @@ const CartContainer = () => {
           <Button variant="contained" size="small" onClick={limpiarCarrito}>
             Limpiar carrito
           </Button>
-          <Link to="checkout">
+          <Link to="/checkout">
             <Button variant="contained" size="small">
               Finalizar compra
             </Button>
