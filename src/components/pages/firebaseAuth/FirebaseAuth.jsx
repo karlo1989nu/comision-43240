@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { ingresar, loginWithGoogle, register } from "../../../firebaseconfig";
+import { ingresar, loginWithGoogle, register } from "../../../firebaseConfig";
+//import { ingresar, loginWithGoogle, register } from "../../../firebaseconfig";
 
 const FirebaseAuth = () => {
   const navigate = useNavigate();
